@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Registration and Login</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    #loginSection, #registerSection {
+        width: 400px;
+        margin: 50px auto;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #333333;
+    }
+
+    label {
+        color: #333333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    button {
+        width: 150px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 0 auto;
+        display: block;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    button[type="button"] {
+        margin-top: 10px;
+    }
+
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+    <div class="button-container">
+        <button type="button" onclick="showLogin()">Login</button>
+        <button type="button" onclick="showRegister()">Register</button>
+    </div>
+
+    <div id="loginSection" style="display: none;">
+        <h2>Login</h2>
+        <form>
+            <label for="loginEmail">Email:</label><br>
+            <input type="email" id="loginEmail" name="loginEmail" required><br>
+            <label for="loginPassword">Password:</label><br>
+            <input type="password" id="loginPassword" name="loginPassword" required><br><br>
+            <button type="button" onclick="loginUser()">Login</button>
+        </form>
+        <div id="loginContent"></div>
+    </div>
+
+    <div id="registerSection" style="display: none;">
+        <h2>Register</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="lastName">Last Name:</label><br>
+            <input type="text" id="lastName" name="lastName" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <label for="favoriteTeam">Favorite Sport Team:</label><br>
+            <input type="text" id="favoriteTeam" name="favoriteTeam" required><br><br>
+            <button type="button" onclick="registerUser()">Register</button>
+        </form>
+    </div>
+
+    <script src="index.js"></script> 
+</body>
+</html>
+
